@@ -24,9 +24,9 @@ def Validate_Month_Date(Date):
     monthname = {1: "January", 2:"Feburary", 3: "March", 4: "April", 5 : "May", 6: "June", 7: "July", 8: "August", 9: "September",10: "October", 11: "November", 12: "December"}
 
     if Leapyear(Date):
-        print("{} is not a leap year".format(year))
+        print("{} is a leap year".format(year))
     else:
-        print("{} is leap year".format(year))
+        print("{} is not a leap year".format(year))
 
     if month ==2:
         if Leapyear(Date):
