@@ -35,7 +35,6 @@ def addonetomonth(Date):
     else:
         print("Month is {0}".format(monthname[newmonth]))
 
-
 addonetomonth(Date)
 
 def addonetodate(Date):
@@ -56,10 +55,19 @@ def addonetodate(Date):
                 newdate = 1
                 month = 3
                 print("Date is {0}-{1}".format((newdate), monthname[month]))
+            else:
+                if date < 29:
+                    newdate = date + 1
+                    print("Date is {0}-{1}".format((newdate), monthname[month]))
         else:
             if date < 28:
              newdate = date + 1
              print("Date is {0}-{1}".format((newdate), monthname[month]))
+
+            elif date == 28:
+                newdate = 1
+                month = 3
+                print("Date is {0}-{1}".format((newdate), monthname[month]))
             else:
                 print("InvalidDate")
     elif month in {1, 3, 5, 7, 8, 10, 12}:
@@ -77,7 +85,7 @@ def addonetodate(Date):
             newdate = 1
             month = month + 1
             print("Date is {0}-{1}".format((newdate), monthname[month]))
-        elif date <= 30:
+        elif date < 30:
             print("Date is {0}-{1}".format((date), monthname[month]))
         else:
             print("InvalidDate")
